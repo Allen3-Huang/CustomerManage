@@ -116,7 +116,7 @@ namespace CustomerManage.Controllers
         {
             客戶銀行資訊 客戶銀行資訊 = db.客戶銀行資訊.Find(id);
             客戶銀行資訊.是否已刪除 = true;
-            db.Entry(客戶銀行資訊).State = EntityState.Modified;
+            //db.Entry(客戶銀行資訊).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

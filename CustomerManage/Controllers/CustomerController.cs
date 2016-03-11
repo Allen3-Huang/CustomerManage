@@ -154,7 +154,7 @@ namespace CustomerManage.Controllers
             客戶資料 客戶資料 = db.客戶資料.Find(id);
             //db.客戶資料.Remove(客戶資料);
             客戶資料.是否已刪除 = true;
-            db.Entry(客戶資料).State = EntityState.Modified;
+            //db.Entry(客戶資料).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

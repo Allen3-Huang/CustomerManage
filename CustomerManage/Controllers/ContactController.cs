@@ -117,7 +117,7 @@ namespace CustomerManage.Controllers
             客戶聯絡人 客戶聯絡人 = db.客戶聯絡人.Find(id);
             //db.客戶聯絡人.Remove(客戶聯絡人);
             客戶聯絡人.是否已刪除 = true;
-            db.Entry(客戶聯絡人).State = EntityState.Modified;
+            //db.Entry(客戶聯絡人).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
