@@ -19,7 +19,8 @@ namespace CustomerManage.Models
             public string 統一編號 { get; set; }
             [Required(ErrorMessage = "電話必填")]
             [MaxLength(50, ErrorMessage = "電話不得超過50個字元")]
-            [Phone]
+            //[Phone]
+            [RegularExpression(@"\d{4}-\d{6}",ErrorMessage="手機格是錯誤!")]
             public string 電話 { get; set; }
 
             [Required(ErrorMessage = "傳真必填")]

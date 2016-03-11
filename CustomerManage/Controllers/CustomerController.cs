@@ -32,7 +32,7 @@ namespace CustomerManage.Controllers
 
             if (!string.IsNullOrEmpty(name))
             {
-                customers = db.客戶資料.Where(c => c.是否已刪除 == false && c.客戶名稱 == name).ToList();
+                customers = db.客戶資料.Where(c => c.是否已刪除 == false && c.客戶名稱.Contains(name.Trim())).ToList();
             }
             else
             {
